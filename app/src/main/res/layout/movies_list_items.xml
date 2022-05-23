@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/moviecardview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/threehundreddp"
+    android:layout_margin="@dimen/fivedp"
+    app:cardCornerRadius="@dimen/tendp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/iv_cardbg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/iv_poster"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/fivedp"
+            android:src="@color/purple"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8"/>
+        <TextView
+            android:id="@+id/id_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/movie_title"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/robotocondensedregular"
+            android:textColor="?colorOnPrimary"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/fivedp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textAllCaps="true"
+            android:layout_weight="0.2"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

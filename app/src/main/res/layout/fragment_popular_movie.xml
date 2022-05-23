@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/str" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/defaultText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/no_internet"
+            android:textSize="30sp"
+            android:textColor="?colorSecondary"
+            android:gravity="center"/>
+
+
+        <HorizontalScrollView
+            android:id="@+id/hsv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/eightydp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/rv_popular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/horror"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fivedp"
+                    android:background="@drawable/button"
+                    android:padding="@dimen/fivedp"
+                    android:text="horror" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/thriller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fivedp"
+                    android:background="@drawable/button"
+                    android:text="thriller"
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/scifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fivedp"
+                    android:background="@drawable/button"
+                    android:text="sci-fi" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/adventure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fivedp"
+                    android:background="@drawable/button"
+                    android:paddingHorizontal="@dimen/tendp"
+                    android:text="adventure" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/romantic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fivedp"
+                    android:background="@drawable/button"
+                    android:paddingHorizontal="@dimen/tendp"
+                    android:text="Romantic" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_popular"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/eightydp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/movies_list_items" />
+
+        <ProgressBar
+            android:id="@+id/progressPopular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/rv_popular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

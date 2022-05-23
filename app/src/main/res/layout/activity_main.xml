@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/fiftydp">
+
+        <fragment
+            android:id="@+id/fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost = "true"
+            android:name = "androidx.navigation.fragment.NavHostFragment"
+            app:navGraph = "@navigation/main_nav_graph"
+            />
+    </FrameLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@id/bottomAppBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/icons8_search_1"
+        android:backgroundTint="?colorPrimary"
+        app:layout_anchor="@id/bottomAppBar"
+        app:hideOnScroll="true"
+        app:layout_scrollFlags="scroll|enterAlways"/>
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sixtydp"
+        android:layout_gravity="bottom"
+        app:fabCradleRoundedCornerRadius="@dimen/fifteendp"
+        app:contentInsetStart="@dimen/fivedp"
+        app:hideOnScroll="true"
+        app:fabCradleMargin="@dimen/tendp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        >
+        <!--app:contentInsetStart="0dp"-->//this is for to remove the margin on left of bottom navigation view
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu="@menu/bottom_navigation_menu"
+            android:elevation="@dimen/zerodp"
+            android:layout_marginEnd="@dimen/fivedp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:contentInsetStart="0dp"
+            android:background="@android:color/transparent" />
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
