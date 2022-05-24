@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                 fragment.findNavController().navigate(R.id.searchFragment)
 
             }
-            bottomNavigationView.setOnNavigationItemSelectedListener {
+            bottomNavigationView.setOnItemSelectedListener {
                 when (it.itemId) {
                     R.id.popularMovieFragment -> {
                         fragment.findNavController().navigate(R.id.popularMovieFragment)
