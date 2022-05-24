@@ -5,13 +5,13 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.MovieFragment"
-    android:layout_margin="@dimen/fivedp"
-    app:cardCornerRadius="@dimen/thirtydp"
+    android:layout_margin="@dimen/fiveDp"
+    app:cardCornerRadius="@dimen/thirtyDp"
     app:cardBackgroundColor="?colorPrimaryVariant"
-    app:cardElevation="@dimen/tendp"
-    app:cardMaxElevation="@dimen/tendp">
+    app:cardElevation="@dimen/tenDp"
+    app:cardMaxElevation="@dimen/tenDp">
     <ImageView
-        android:id="@+id/iv_bg_movie"
+        android:id="@+id/ivBgMovie"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:id="@+id/constraintLayout2"
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -35,24 +35,24 @@
             app:layoutDescription="@xml/fragment_movie_xml_constraintlayout2_scene">
 
             <ImageView
-                android:id="@+id/iv_movie_poster"
+                android:id="@+id/ivMoviePoster"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/threefiftydp"
-                android:layout_marginHorizontal="@dimen/twentydp"
+                android:layout_height="@dimen/threeFiftyDp"
+                android:layout_marginHorizontal="@dimen/twentyDp"
                 android:background="?colorSecondary"
                 android:scaleType="fitCenter"
-                android:layout_marginTop="@dimen/tendp"
-                app:layout_constraintBottom_toTopOf="@id/tv_movie_title"
+                android:layout_marginTop="@dimen/tenDp"
+                app:layout_constraintBottom_toTopOf="@id/tvMovieTitle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
             <TextView
-                android:id="@+id/tv_movie_title"
+                android:id="@+id/tvMovieTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/tendp"
+                android:layout_margin="@dimen/tenDp"
                 android:fontFamily="@font/robotocondensedregular"
                 android:textAllCaps="true"
                 android:textSize="30sp"
@@ -63,18 +63,18 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iv_movie_poster" />
+                app:layout_constraintTop_toBottomOf="@id/ivMoviePoster" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/tendp"
+                android:layout_marginTop="@dimen/tenDp"
                 android:background="@drawable/card"
-                app:cardCornerRadius="@dimen/thirtydp"
-                android:layout_marginHorizontal="@dimen/tendp"
+                app:cardCornerRadius="@dimen/thirtyDp"
+                android:layout_marginHorizontal="@dimen/tenDp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_movie_title">
+                app:layout_constraintTop_toBottomOf="@id/tvMovieTitle">
 
                 <LinearLayout
                     android:id="@+id/ll1"
@@ -82,31 +82,31 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:orientation="vertical"
-                    app:layout_constraintBottom_toTopOf="@id/tv_movie_desc"
+                    app:layout_constraintBottom_toTopOf="@id/tvMovieDesc"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_weight="2">
 
                     <TextView
-                        android:id="@+id/tv_release_date"
+                        android:id="@+id/tvReleaseDate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/robotocondenseditalic"
                         />
 
                     <TextView
-                        android:id="@+id/tv_movie_vote"
+                        android:id="@+id/tvMovieVote"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/robotocondenseditalic"
                         />
                     <TextView
-                        android:id="@+id/tv_runtime"
+                        android:id="@+id/tvRuntime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/robotocondenseditalic"
                         />
                     <TextView
-                        android:id="@+id/tv_genre"
+                        android:id="@+id/tvGenre"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/robotocondenseditalic"
@@ -116,7 +116,7 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/tv_movie_desc"
+                    android:id="@+id/tvMovieDesc"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
@@ -130,7 +130,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="210dp"
                     tools:listitem="@layout/movies_images_items"
-                    app:layout_constraintTop_toBottomOf="@id/tv_movie_desc"
+                    app:layout_constraintTop_toBottomOf="@id/tvMovieDesc"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:layout_margin="10dp"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
@@ -146,7 +146,7 @@
                 android:textSize="20sp"
                 />
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_similarm"
+            android:id="@+id/rvSimilar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"

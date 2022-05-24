@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
-    android:id="@+id/moviecardview"
+    android:id="@+id/movieCardView"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/threehundreddp"
-    android:layout_margin="@dimen/fivedp"
-    app:cardCornerRadius="@dimen/tendp"
+    android:layout_height="@dimen/threeHundredDp"
+    android:layout_margin="@dimen/fiveDp"
+    app:cardCornerRadius="@dimen/tenDp"
 
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <ImageView
-        android:id="@+id/iv_cardbg"
+        android:id="@+id/ivCardbg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
@@ -22,14 +22,14 @@
         android:weightSum="2">
 
         <ImageView
-            android:id="@+id/iv_poster"
+            android:id="@+id/ivPoster"
             android:layout_width="match_parent"
-            android:layout_margin="@dimen/fivedp"
+            android:layout_margin="@dimen/fiveDp"
             android:src="@color/purple"
             android:layout_height="wrap_content"
             android:layout_weight="1.8"/>
         <TextView
-            android:id="@+id/id_title"
+            android:id="@+id/idTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/movie_title"
@@ -39,7 +39,7 @@
             android:fontFamily="@font/robotocondensedregular"
             android:textColor="?colorOnPrimary"
             android:textStyle="bold"
-            android:layout_margin="@dimen/fivedp"
+            android:layout_margin="@dimen/fiveDp"
             android:maxLines="2"
             android:ellipsize="end"
             android:textAllCaps="true"

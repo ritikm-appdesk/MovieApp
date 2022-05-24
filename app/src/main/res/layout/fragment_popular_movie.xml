@@ -23,9 +23,9 @@
         <HorizontalScrollView
             android:id="@+id/hsv"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/eightydp"
+            android:layout_height="@dimen/eightyDp"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@id/rv_popular"
+            app:layout_constraintBottom_toTopOf="@id/rvPopular"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -39,56 +39,56 @@
                     android:id="@+id/horror"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/fivedp"
+                    android:layout_margin="@dimen/fiveDp"
                     android:background="@drawable/button"
-                    android:padding="@dimen/fivedp"
-                    android:text="horror" />
+                    android:padding="@dimen/fiveDp"
+                    android:text="@string/horror" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/thriller"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/fivedp"
+                    android:layout_margin="@dimen/fiveDp"
                     android:background="@drawable/button"
-                    android:text="thriller"
+                    android:text="@string/thriller"
 
                     />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/scifi"
+                    android:id="@+id/sciFi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/fivedp"
+                    android:layout_margin="@dimen/fiveDp"
                     android:background="@drawable/button"
-                    android:text="sci-fi" />
+                    android:text="@string/sci_fi" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/adventure"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/fivedp"
+                    android:layout_margin="@dimen/fiveDp"
                     android:background="@drawable/button"
-                    android:paddingHorizontal="@dimen/tendp"
-                    android:text="adventure" />
+                    android:paddingHorizontal="@dimen/tenDp"
+                    android:text="@string/adventure" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/romantic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/fivedp"
+                    android:layout_margin="@dimen/fiveDp"
                     android:background="@drawable/button"
-                    android:paddingHorizontal="@dimen/tendp"
-                    android:text="Romantic" />
+                    android:paddingHorizontal="@dimen/tenDp"
+                    android:text="@string/romantic" />
 
             </LinearLayout>
 
         </HorizontalScrollView>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_popular"
+            android:id="@+id/rvPopular"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/eightydp"
+            android:layout_marginTop="@dimen/eightyDp"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             tools:listitem="@layout/movies_list_items" />
 
@@ -96,7 +96,7 @@
             android:id="@+id/progressPopular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@id/rv_popular"
+            app:layout_constraintBottom_toBottomOf="@id/rvPopular"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             android:visibility="gone"

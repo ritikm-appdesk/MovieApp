@@ -2,7 +2,7 @@ package com.example.movieapplication.database
 
 import com.example.movieapplication.api.RetrofitInstance
 
-class MovieRepository(val db : MovieDatabase) {
+class MovieRepository {
 
     suspend fun  popularMovies(page:Int) = RetrofitInstance.api.getPopular(page = page)
     suspend fun  topRatedMovies(page:Int) = RetrofitInstance.api.getTopRated(page = page)

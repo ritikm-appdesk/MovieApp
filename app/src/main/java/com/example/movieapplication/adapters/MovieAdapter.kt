@@ -1,6 +1,5 @@
 package com.example.movieapplication.adapters
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -11,12 +10,12 @@ import com.example.movieapplication.databinding.MoviesListItemsBinding
 import com.example.movieapplication.databinding.SimilarMoviesItemsBinding
 import com.example.movieapplication.models.Result
 import com.example.movieapplication.models.images.Poster
-import com.example.movieapplication.utils.Constants.Companion.IMAGERV
-import com.example.movieapplication.utils.Constants.Companion.POPULARRV
-import com.example.movieapplication.utils.Constants.Companion.SIMILARRV
-import com.example.movieapplication.utils.Constants.Companion.URLIMAGE
+import com.example.movieapplication.utils.Constants.Companion.IMAGERECYCLERVIEW
+import com.example.movieapplication.utils.Constants.Companion.POPULARRECYCLERVIEW
+import com.example.movieapplication.utils.Constants.Companion.SIMILARRECYCLERVIEW
+import com.example.movieapplication.utils.Constants.Companion.URLFORIMAGE
 
-class MovieAdapter(private val ls :List<Result>?,private val lsi:List<Poster>?,private val type:String) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class MovieAdapter(private val list :List<Result>?, private val imageList:List<Poster>?, private val recyclerViewType:String) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     class ViewMovieListHolder(val binding : MoviesListItemsBinding) :RecyclerView.ViewHolder(binding.root)
     class ViewSimilarHolder( val binding : SimilarMoviesItemsBinding) :RecyclerView.ViewHolder(binding.root)
     class ViewImagesHolder( val binding : MoviesImagesItemsBinding) :RecyclerView.ViewHolder(binding.root)
@@ -33,16 +32,16 @@ class MovieAdapter(private val ls :List<Result>?,private val lsi:List<Poster>?,p
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder.javaClass) {
             ViewMovieListHolder::class.java -> {
-                val movie = ls!!.get(position)
+                val movie = list!![position]
                 val viewHolder = holder as ViewMovieListHolder
                 viewHolder.binding.apply {
-                    ivPoster.load(URLIMAGE +movie.poster_path)
-                    ivCardbg.load(URLIMAGE +movie.poster_path){
+                    ivPoster.load(URLFORIMAGE +movie.poster_path)
+                    ivCardbg.load(URLFORIMAGE +movie.poster_path){
                         transformations(BlurTransformation(holder.itemView.context,25f))
                     }
                     idTitle.text = movie.title
                     root.setOnClickListener {
-                        mlistener?.let {
+                        onCLickListener?.let {
                             it(movie)
                         }
                     }
@@ -50,61 +49,60 @@ class MovieAdapter(private val ls :List<Result>?,private val lsi:List<Poster>?,p
             }
             ViewSimilarHolder::class.java -> {
                 val viewHolder = holder as ViewSimilarHolder
-                val movie = ls!!.get(position)
+                val movie = list!![position]
                 viewHolder.binding.apply {
-                    ivPoster.load(URLIMAGE + movie.poster_path)
-                    ivCardbg.load(URLIMAGE + movie.poster_path) {
+                    ivPoster.load(URLFORIMAGE + movie.poster_path)
+                    ivCardbg.load(URLFORIMAGE + movie.poster_path) {
                         transformations(BlurTransformation(holder.itemView.context, 25f))
                     }
                     idTitle.text = movie.title
                     root.setOnClickListener {
-                        mlistener?.let {
+                        onCLickListener?.let {
                             it(movie)
                         }
                     }
                 }
             }
             ViewImagesHolder::class.java -> {
-                val image = lsi!!.get(position)
+                val image = imageList!![position]
                 val viewHolder = holder as ViewImagesHolder
                 viewHolder.binding.apply {
-                    ivImages.load(URLIMAGE+image.file_path.toString())
-                    Log.d("TAGet",URLIMAGE+ image.file_path.toString())
+                    ivImages.load(URLFORIMAGE+ image.file_path)
                 }
             }
         }
 
     }
-    private var mlistener : ((Result) -> Unit)? = null
+    private var onCLickListener : ((Result) -> Unit)? = null
 
     fun setOnItemCLickListener(listener : (Result)->Unit){
-        mlistener = listener
+        onCLickListener = listener
     }
 
     override fun getItemViewType(position: Int): Int {
-        return when (type) {
-            POPULARRV -> 1
-            SIMILARRV -> 2
-            IMAGERV -> 3
+        return when (recyclerViewType) {
+            POPULARRECYCLERVIEW -> 1
+            SIMILARRECYCLERVIEW -> 2
+            IMAGERECYCLERVIEW -> 3
             else -> 0
         }
     }
     override fun getItemCount(): Int {
-        return when (type) {
-            POPULARRV -> {
-                ls?.let{
+        return when (recyclerViewType) {
+            POPULARRECYCLERVIEW -> {
+                list?.let{
                     return it.size
                 }
                 return 0
             }
-            SIMILARRV -> {
-                ls?.let{
+            SIMILARRECYCLERVIEW -> {
+                list?.let{
                     return it.size
                 }
                 return 0
             }
-            IMAGERV -> {
-                lsi?.let {
+            IMAGERECYCLERVIEW -> {
+                imageList?.let {
                     return it.size
                 }
                 return 0

@@ -1,16 +1,19 @@
 <resources>
     <string name="app_name">Movie Application</string>
     <string name="popular">Popular</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="top_rated">Top Rated</string>
-    <string name="marvelmovies">marvelmovies</string>
-    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cupiditate, eligendi eum ex facere iste numquam quasi! Aut distinctio dolorum maxime sequi! Accusamus delectus dolor eveniet excepturi exercitationem explicabo fugiat ipsam maiores nihil possimus quae, quam quasi, quia reiciendis saepe tenetur veritatis. Accusamus asperiores consequuntur, dolor dolore expedita facilis natus odit placeat repellendus sit ullam veniam? A at blanditiis consequuntur corporis labore minus nesciunt obcaecati qui quibusdam quisquam! Autem delectus ea excepturi exercitationem expedita fuga, illum impedit inventore iusto magnam maiores minima odit praesentium provident qui quibusdam quis ratione recusandae totam vel, velit vero voluptas. Blanditiis, commodi eligendi expedita iste laudantium modi molestias, nostrum officia qui saepe sequi sit suscipit. Adipisci aliquam amet aspernatur commodi consequatur cumque debitis dignissimos eius id in molestiae molestias nemo nesciunt, odit placeat possimus praesentium repellat rerum sint sit tempore tenetur vel vero vitae voluptate. Aliquam, autem consequatur dicta eaque excepturi exercitationem itaque laboriosam, maxime molestias neque, nesciunt nobis possimus quae quis recusandae sunt veniam. Ab aliquam animi commodi earum excepturi facilis ipsam, perferendis praesentium quas quibusdam quidem rem sint vero! Adipisci animi consectetur cum deleniti dolorum eius error fugit labore laboriosam libero minima modi omnis optio possimus, quo quod recusandae rerum tempore veritatis voluptas.</string>
+    <string name="marvelmovies">marvelMovies</string>
     <string name="movie_title">movie_title</string>
     <string name="similar_movies">Similar Movies</string>
     <string name="vote">vote</string>
-    <string name="releasedate">releasedate</string>
-    <string name="movie_images">Movie Images</string>
-    <string name="search">Search...</string>
+    <string name="releaseDate">releasedate</string>
+    <string name="movieImages">Movie Images</string>
+    <string name="search">Search…</string>
     <string name="no_internet">No Internet</string>
+    <string name="romantic">Romantic</string>
+    <string name="adventure">adventure</string>
+    <string name="sci_fi">sci-fi</string>
+    <string name="thriller">thriller</string>
+    <string name="horror">horror</string>
 </resources>

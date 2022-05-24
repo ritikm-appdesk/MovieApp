@@ -9,19 +9,19 @@
         motion:duration="1000">
        <KeyFrameSet>
            <KeyAttribute
-               motion:motionTarget="@+id/iv_movie_poster"
+               motion:motionTarget="@+id/ivMoviePoster"
                motion:framePosition="100"
                android:alpha="0" />
            <KeyAttribute
-               motion:motionTarget="@+id/iv_movie_poster"
+               motion:motionTarget="@+id/ivMoviePoster"
                motion:framePosition="50"
                android:alpha="0.5" />
            <KeyAttribute
-               motion:motionTarget="@+id/iv_movie_poster"
+               motion:motionTarget="@+id/ivMoviePoster"
                motion:framePosition="100"
                android:alpha="0.5" />
            <KeyAttribute
-               motion:motionTarget="@+id/iv_movie_poster"
+               motion:motionTarget="@+id/ivMoviePoster"
                motion:framePosition="0"
                android:alpha="0.5" />
        </KeyFrameSet>
@@ -33,19 +33,19 @@
 
     <ConstraintSet android:id="@+id/end">
         <Constraint
-            android:id="@+id/iv_movie_poster"
+            android:id="@+id/ivMoviePoster"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="250dp"
             android:layout_height="0.1dp"
-            motion:layout_constraintBottom_toTopOf="@id/tv_movie_title"
+            motion:layout_constraintBottom_toTopOf="@id/tvMovieTitle"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent" />
         <Constraint
-            android:id="@+id/iv_movie_poster"
+            android:id="@+id/ivMoviePoster"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="250dp"
             android:layout_height="0.1dp"
-            motion:layout_constraintBottom_toTopOf="@id/tv_movie_title"
+            motion:layout_constraintBottom_toTopOf="@id/tvMovieTitle"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent" />
     </ConstraintSet>
